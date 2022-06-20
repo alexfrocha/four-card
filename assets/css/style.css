@@ -14,5 +14,129 @@
     --very-dark-blue-color: hsl(234, 12%, 34%);
     --grayish-blue-color: hsl(229, 6%, 66%);
     --very-light-gray-color: hsl(0, 0%, 98%);
+    --common-ff: 'Poppins', sans-serif;
+}
 
+body {
+    background-color: var(--very-light-gray-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-title, .content-subtitle, .content-text {
+    text-align: center;
+}
+
+.content-title, .content-subtitle {
+    font-size: 33px;
+}
+
+.content-title {
+    font-weight: 200;
+}
+
+
+.content-text {
+    color: var(--grayish-blue-color);
+    margin-top: 1rem;
+    display: block;
+    font-size: 12px;
+}
+
+.content {
+    font-family: var(--common-ff);
+    margin: 1rem 6rem;
+    margin-bottom: 0;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.card-image {
+    width: 50px;
+    margin-left: 83%;
+}
+
+.card {
+    width: 300px;
+    box-shadow: 0 0 20px hsl(212, 45%, 84%);
+    background-color: white;
+    border-radius: 7px;
+}
+
+.card:nth-child(1) {
+    border-top: 4px solid var(--cyan-color);
+}
+
+.card:nth-child(2) {
+    border-top: 4px solid var(--orange-color);
+}
+
+.card:nth-child(3) {
+    border-top: 4px solid var(--blue-color);
+}
+
+.card.card-center-top {
+    border-top: 4px solid var(--red-color);
+}
+
+.card-text {
+    font-size: 12px;
+    font-weight: 200;
+    margin-top: 5px;
+}
+
+.card-title {
+    color: var(--very-dark-blue-color);
+}
+
+.card-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.card-group-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.card-center-bottom {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .card-group {
+        flex-direction: column;
+    }
+    .container-title, .container-subtitle {
+        font-size: 55px;
+        color: red;
+    }
+
+    .card-group-center {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .card {
+        margin-top: 1rem;
+    }
+    .card:last-child {
+        margin-bottom: 1.5rem;
+    }
+    .card.card-center-bottom {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
 }
